@@ -408,17 +408,101 @@ footer {
   }
 
 }
+   
+/* =====================================
+   iMPACT + CRNL HEADER
+   ===================================== */
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 48px;
+  background: #d6ccc3;
+}
+
+.crnl-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.crnl-logo {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.crnl-name {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #29231f;
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+  .brand-group {
+    gap: 12px;
+  }
+
+  .crnl-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .crnl-name {
+    font-size: 10px;
+  }
+
+  .brand-divider {
+    height: 35px;
+  }
+}
+
   </style>
  </head>
  <body>
   <header>
    <div class="nav">
-    <a class="logo" href="#home">
-     iMPACT
-     <small>
-      CRNL · LYON
-     </small>
-    </a>
+
+<!-- iMPACT TEAM AND CRNL AFFILIATION -->
+<div class="brand-group">
+
+  <a class="logo" href="#home">
+    iMPACT
+    <small>RESEARCH TEAM</small>
+  </a>
+
+  <div class="brand-divider"></div>
+
+  <a
+    class="crnl-brand"
+    href="https://www.crnl.fr/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Centre de Recherche en Neurosciences de Lyon"
+  >
+    <img
+      src="crnl-logo.png"
+      alt="CRNL logo"
+      class="crnl-logo"
+    />
+
+    <span class="crnl-name">
+      Centre de Recherche en<br>
+      Neurosciences de Lyon
+    </span>
+  </a>
+
+</div>
+
     <nav>
      <a data-en="About" data-fr="À propos" href="#about">
       About
@@ -448,11 +532,53 @@ footer {
    <!-- HOME SECTION -->
    <section class="hero" id="home">
     <div>
-     <div class="eyebrow">
-      Centre de Recherche en
-      <br/>
-      Neurosciences de Lyon · CRNL
-     </div>
+
+<div class="hero-affiliation">
+  <span class="affiliation-label"
+    data-en="A research team at"
+    data-fr="Une équipe de recherche du">
+    A research team at
+  </span>
+
+  <strong>
+    Centre de Recherche en<br>
+    Neurosciences de Lyon
+  </strong>
+
+  <span class="affiliation-acronym">
+    CRNL · LYON
+  </span>
+</div>
+
+.hero-affiliation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.affiliation-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8a7160;
+}
+
+.hero-affiliation strong {
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 2.3vw, 30px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #29231f;
+}
+
+.affiliation-acronym {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8a7160;
+}
+
      <h1 data-en="Welcome to&lt;br&gt;&lt;em&gt;iMPACT.&lt;/em&gt;" data-fr="Bienvenue chez&lt;br&gt;&lt;em&gt;iMPACT.&lt;/em&gt;">
       Welcome to
       <br/>
